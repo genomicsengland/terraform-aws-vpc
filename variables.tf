@@ -310,6 +310,11 @@ variable "enable_s3_endpoint" {
   default     = false
 }
 
+variable "s3_endpoint_policy" {
+  description = "A JSON string containing the policy to apply to this endpoint"
+  default     = ""
+}
+
 variable "enable_codebuild_endpoint" {
   description = "Should be true if you want to provision an Codebuild endpoint to the VPC"
   default     = false
