@@ -657,6 +657,11 @@ variable "ecr_dkr_endpoint_security_group_ids" {
   default     = []
 }
 
+variable "ecr_dkr_endpoint_policy" {
+  description = "A JSON string containing the policy to apply to this endpoint"
+  default     = ""
+}
+
 variable "enable_kms_endpoint" {
   description = "Should be true if you want to provision a KMS endpoint to the VPC"
   type        = bool
