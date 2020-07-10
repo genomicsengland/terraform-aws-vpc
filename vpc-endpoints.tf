@@ -382,6 +382,7 @@ resource "aws_vpc_endpoint" "ecr_dkr" {
   security_group_ids  = var.ecr_dkr_endpoint_security_group_ids
   subnet_ids          = coalescelist(var.ecr_dkr_endpoint_subnet_ids, aws_subnet.private.*.id)
   private_dns_enabled = var.ecr_dkr_endpoint_private_dns_enabled
+  policy              = var.ecr_dkr_endpoint_policy
   tags                = local.vpce_tags
 }
 
